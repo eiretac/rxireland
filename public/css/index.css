@@ -25,7 +25,7 @@ body {
 header {
    background-color: #004d44;
    color: #ffffff;
-   padding: 5px 20px;
+   padding: 5px 15px; /* Reduced padding to bring items closer */
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -37,14 +37,13 @@ header {
 header img {
    max-width: 150px;
    height: auto;
-   margin-left: 50px; /* Added 'px' unit */
 }
 
 nav {
    background-color: #004d44;
    color: #ffffff;
-   padding-right: 5px;
-   padding-left: 15px;
+   padding-right: 10px; /* Reduced padding to bring items closer */
+   padding-left: 10px; /* Reduced padding to bring items closer */
    font-size: 16px;
    flex: 1;
 }
