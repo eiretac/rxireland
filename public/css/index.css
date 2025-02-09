@@ -43,9 +43,9 @@ header img {
 nav {
    background-color: #004d44;
    color: #ffffff;
-   padding-right: 15px;
+   padding-right: 5px;
    padding-left: 15px;
-   font-size: 20px;
+   font-size: 16px;
    flex: 1;
 }
 
