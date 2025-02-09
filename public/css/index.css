@@ -72,6 +72,48 @@ nav ul li a:hover {
    background-color: #0056a0;
 }
 
+/* Main section for Bridgend */
+.bridgend-section {
+    background-image: url('../img/bridgend-background.png'); /* Add your Bridgend background image here */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 100px 0; /* Adjust padding to fit your design */
+    position: relative;
+}
+
+.bridgend-content {
+    position: relative;
+    z-index: 10;
+}
+
+.bridgend-section h2 {
+    font-size: 48px; /* Adjust the font size as needed */
+    margin-bottom: 20px;
+}
+
+.bridgend-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #004d44;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056a0;
+}
+
+
+
 /* Search Container Styling */
 .search-container {
     padding: 30px 0;
