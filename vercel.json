@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/fonts/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/img/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/javascript/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/pages/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/static/_reboot/_reboot_app/css/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/public/fonts/$1"
+    },
+    {
+      "src": "/img/(.*)",
+      "dest": "/public/img/$1"
+    },
+    {
+      "src": "/javascript/(.*)",
+      "dest": "/public/javascript/$1"
+    },
+    {
+      "src": "/pages/(.*)",
+      "dest": "/public/pages/$1"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/public/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html"
+    }
+  ]
+}
