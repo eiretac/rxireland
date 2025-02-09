@@ -71,8 +71,6 @@ nav ul li a:hover {
    background-color: #0056a0;
 }
 
-
-
 /* Search Container Styling */
 .search-container {
     padding: 30px 0;
@@ -208,66 +206,4 @@ footer {
  
 .social-icons a:hover {
    color: #ffca2b;
-}
-
-
-/* Dark Mode Styles */
-body.dark-mode {
-   background-color: #121212; /* Dark background */
-   color: #f0f0f0; /* Light text */
-}
-
-header.dark-mode {
-   background-color: #004d44;
-   color: #ffffff;
-}
-
-nav.dark-mode {
-   background-color: #1b1b1b;
-}
-
-nav ul li a.dark-mode {
-   color: #ffffff;
-}
-
-nav ul li a:hover.dark-mode {
-   background-color: #333333;
-}
-
-.search-container.dark-mode {
-   background-color: #333333;
-}
-
-.search-box.dark-mode input[type="text"] {
-   background-color: #444444;
-   color: #ffffff;
-}
-
-.search-box.dark-mode button {
-   background-color: #555555;
-   border-color: #555555;
-}
-
-.search-box.dark-mode button:hover {
-   background-color: #777777;
-}
-
-.search-info.dark-mode {
-   color: #ffffff;
-}
-
-.container.dark-mode {
-   background-color: #1e1e1e;
-}
-
-footer.dark-mode {
-   background-color: #004d44;
-}
- 
-.footer-links a.dark-mode {
-   color: #bbbbbb;
-}
-
-.social-icons a.dark-mode:hover {
-   color: #dddddd;
 }
