@@ -40,43 +40,6 @@
         </nav>
     </header>
 
-    <div class="container-fluid margin-bottom-xlg" id="main" role="main">
-        <div class="row search-container" style="background-color: #00665C;" reboot-jumbotron="">
-            <div class="container">
-                <div class="row">
-                    <!-- Left side: Search form -->
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <h1 tabindex="0" style="color: #FFF;">
-                            Search for services<br>or information
-                        </h1>
-                        <form action="/en/search/" method="GET" role="search" aria-label="Enter search term">
-                            <div class="input-group" style="width: 82%;">
-                                <input type="text" name="q" value="" class="form-control input-lg no-radius" aria-label="Search input field" placeholder="Enter search term">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-state-gold btn-lg no-radius" alt="Button: Search" onclick="removeTags();">
-                                        <img src="/img/Icon_Search.png" alt="Image: Search button"> <!-- Updated path for image -->
-                                    </button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Right side: Pinned items -->
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <h2 class="sr-only" style="color: #FFF;">Pinned items</h2>
-                        <ul aria-label="Pinned items" reboot-site-list="">
-                            <li><a href="/en/campaigns/budget/">Budget 2025</a></li>
-                            <li><a href="/en/publication/79659-climate-action-plan-2024/">Climate Action Plan 2024</a></li>
-                            <li><a href="/en/campaigns/dfc50-housing-for-all/">Housing for All</a></li>
-                            <li><a href="/en/campaigns/56c17-migration-and-ireland/">Migration and Ireland</a></li>
-                            <li><a href="/en/publication/32015-sell-to-government/">Sell to Government</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <h1>gov.ie</h1>
         <p>what the frick.</p>
@@ -120,7 +83,7 @@
             const username = localStorage.getItem('username');
 
             if (username) {
-                authLink.innerHTML = <a href="/pages/logout.html">Welcome, ${username}</a>;
+                authLink.innerHTML = `<a href="/pages/logout.html">Welcome, ${username}</a>`;
             } else {
                 authLink.innerHTML = '<a href="/pages/signin.html">Sign in</a>';
             }
