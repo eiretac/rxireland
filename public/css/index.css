@@ -74,7 +74,7 @@ nav ul li a:hover {
 
 /* Main section for Bridgend */
 .bridgend-section {
-    background-image: url('../img/bridgend.png'); /* Add your Bridgend background image here */
+    background-image: url('https://media.discordapp.net/attachments/1273657480743751754/1330237179083096104/image.png?ex=67a997aa&is=67a8462a&hm=089fb9c7845c40599da98127fe8c1387fcfbcbab5f1264c22c1b0c900bc4067c&=&format=webp&quality=lossless&width=1318&height=671'); /* Add your Bridgend background image here */
     background-size: cover;
     background-position: center;
     text-align: center;
