@@ -3,275 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ireland on Roblox</title>
+    <title>About | Roblox Ireland</title>
     <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="/javascript/theme.js" defer></script>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        header {
-            background-color: #004d00;
-            color: #fff;
-            padding: 15px 0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .navbar-logo img {
-            height: 50px;
-        }
-
-        .navbar-links ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar-links li {
-            margin-left: 20px;
-        }
-
-        .navbar-links a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .navbar-links a:hover {
-            color: #ffcc00;
-        }
-
-        /* Hero Section */
-        .intro {
-            background: url('img/hero-background.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .intro-content h1 {
-            font-size: 48px;
-            font-weight: 700;
-        }
-
-        .intro-content p {
-            font-size: 20px;
-            margin: 20px 0;
-        }
-
-        .play-button {
-            padding: 12px 30px;
-            background-color: #ffcc00;
-            color: #333;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .play-button:hover {
-            background-color: #ff9900;
-        }
-
-        /* Sections */
-        .page-section {
-            padding: 60px 20px;
-            color: white;
-            text-align: center;
-            background-size: cover;
-            background-position: center;
-            border-bottom: 5px solid #fff;
-            margin: 20px 0;
-        }
-
-        .section-content h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .section-content p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            background-color: #004d00;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #006600;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 40px 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-left,
-        .footer-middle,
-        .footer-right {
-            flex: 1;
-            padding: 0 20px;
-        }
-
-        .footer-links a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .footer-links a:hover {
-            color: #ffcc00;
-        }
-
-        .social-icons a {
-            color: #fff;
-            margin-right: 15px;
-            font-size: 20px;
-        }
-
-        .social-icons a:hover {
-            color: #ffcc00;
-        }
-
-        .dark-mode-toggle {
-            margin-top: 20px;
-        }
-
-        /* Dark Mode */
-        body[data-theme="dark"] {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        body[data-theme="dark"] header {
-            background-color: #333;
-        }
-
-        body[data-theme="dark"] .btn {
-            background-color: #006600;
-        }
-
-        body[data-theme="dark"] footer {
-            background-color: #121212;
-        }
-    </style>
+    <script src="javascript/theme.js" defer></script>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar" role="navigation" aria-labelledby="RobloxIrelandNavbar" id="main-navbar">
+        <nav class="navbar" role="navigation" aria-labelledby="main-nav">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="/" class="navbar-logo">
+                    <a href="#" class="navbar-logo">
                         <img src="img/logo.png" alt="Roblox Ireland Logo">
                     </a>
                 </div>
                 <div class="navbar-links">
                     <ul class="nav">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#agencies">Agencies</a></li>
-                        <li><a href="#politics">Politics</a></li>
-                        <li><a href="#development">Development</a></li>
-                        <li><a href="/pages/signin.html">Log in</a></li>
+                        <li><a href="/about.html" class="active">About</a></li>
+                        <li><a href="/agencies.html">Agencies</a></li>
+                        <li><a href="/politics.html">Politics</a></li>
+                        <li><a href="/development.html">Development</a></li>
+                        <li><a href="/misc.html">Misc</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Introduction Section -->
-        <section id="about" class="intro">
-            <div class="intro-content">
-                <h1>Welcome to Roblox Ireland</h1>
-                <p>Our flagship map, Bridgend, has been released! Explore the virtual world of Ireland on Roblox and experience our vibrant culture, politics, and development.</p>
-                <a href="https://www.roblox.com/games/123456789/Bridgend" class="btn play-button">Play Bridgend</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="section-title">Welcome to Roblox Ireland</h1>
+            <p class="hero-description">Explore the flagship map Bridgend, immerse yourself in Ireland’s dynamic community, and take part in shaping the future of Roblox Ireland!</p>
+            <a href="/bridgend" class="cta-button">Play Bridgend</a>
+        </div>
+    </section>
 
-        <!-- Agencies Section -->
-        <section id="agencies" class="page-section" style="background-image: url('img/agencies-bg.jpg');">
-            <div class="section-content">
-                <h2>Agencies</h2>
-                <p>Learn about the different agencies that keep Ireland running smoothly on Roblox.</p>
-                <a href="agencies.html" class="btn">Explore Agencies</a>
+    <!-- About the Project -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Our Mission</h2>
+            <p class="section-description">
+                Roblox Ireland is more than just a game. It is a community-driven virtual space where players can engage in governance, explore digital representations of Ireland, and create a robust, immersive experience. Our mission is to provide a platform where creativity, diplomacy, and teamwork come together to build a unique virtual world.
+            </p>
+            <div class="about-cards">
+                <div class="about-card">
+                    <i class="fas fa-flag"></i>
+                    <h3>Explore Bridgend</h3>
+                    <p>Our flagship map, Bridgend, is the heart of Roblox Ireland, offering exciting gameplay and an opportunity to be part of the community.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Engagement</h3>
+                    <p>Get involved with the community, whether it’s through local governance, development, or just enjoying the collaborative experience of building together.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Connections</h3>
+                    <p>Roblox Ireland strives to connect players worldwide by offering a shared experience of Irish culture and history, within the context of a global virtual community.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Politics Section -->
-        <section id="politics" class="page-section" style="background-image: url('img/politics-bg.jpg');">
-            <div class="section-content">
-                <h2>Politics</h2>
-                <p>Discover the inner workings of the Irish political system within Roblox and how the government operates.</p>
-                <a href="politics.html" class="btn">Explore Politics</a>
+    <!-- Vision Section -->
+    <section class="vision-section">
+        <div class="container">
+            <h2 class="section-title">Our Vision</h2>
+            <p class="vision-description">
+                We envision a future where Roblox Ireland becomes a model for virtual nation-building, fostering creativity, diplomacy, and cooperation. Players will not only build but also influence the direction of this ever-growing world.
+            </p>
+            <div class="vision-media">
+                <video controls>
+                    <source src="videos/roblox-ireland-vision.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Development Section -->
-        <section id="development" class="page-section" style="background-image: url('img/development-bg.jpg');">
-            <div class="section-content">
-                <h2>Development</h2>
-                <p>Get an inside look at the development process behind Roblox Ireland, including future updates and features.</p>
-                <a href="development.html" class="btn">Explore Development</a>
-            </div>
-        </section>
-    </main>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Join Roblox Ireland Today</h2>
+            <p>Whether you're a builder, player, or aspiring leader, there’s a place for you in Roblox Ireland. Be part of the adventure and contribute to shaping the future.</p>
+            <a href="/bridgend" class="cta-button">Play Bridgend Now</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-left footer-section">
-                <img src="/img/logo.png" alt="Roblox Ireland Logo" class="footer-logo" />
-                <p>&copy; Roblox Ireland. All Rights Reserved</p>
+                <img src="img/logo.png" alt="Roblox Ireland Logo" class="footer-logo" />
+                <p>&copy; 2025 Roblox Ireland. All Rights Reserved.</p>
             </div>
             <div class="footer-middle footer-section">
                 <h3>Company</h3>
                 <div class="footer-links">
                     <a href="#careers">Careers</a>
                     <a href="#mediacentre">Media Centre</a>
-                    <a href="/pages/privacy-policy.html">Privacy Policy</a>
+                    <a href="#privacy">Privacy Policy</a>
                     <a href="#contact">Contact Us</a>
                 </div>
             </div>
@@ -279,8 +114,8 @@
                 <h3>Connect with Us</h3>
                 <div class="social-icons">
                     <a href="https://twitter.com/RobloxIreland"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.tiktok.com/@robloxireland"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/robloxireland/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://instagram.com/robloxireland"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/RobloxIreland"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
             <div class="dark-mode-toggle">
