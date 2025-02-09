@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ireland's Agencies</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../img/logo.png" sizes="32x32" type="image/png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Scripts -->
+    <script src="/javascript/theme.js" defer></script>
+
+    <!-- Discord Embed (Open Graph) -->
+    <meta property="og:title" content="Ireland's Agencies - Ireland on Roblox">
+    <meta property="og:description" content="Explore Ireland's various agencies that help maintain order and safety.">
+    <meta property="og:image" content="https://rxireland.org/img/embed.png">
+    <meta property="og:url" content="https://rxireland.org">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <header>
+        <img src="../img/irelandroblox.png" alt="Government of Ireland Logo">
+        <nav>
+            <ul>
+                <li><a href="https://discord.gg/btJ9cVPa5m">Join</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Services</a></li>
+                <li id="auth-link"><a href="/pages/signin.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Agencies of Ireland</h1>
+        <p>Discover the key agencies responsible for the safety and wellbeing of citizens. These services play a vital role in ensuring that the nation remains secure and well-organized.</p>
+    </div>
+
+    <div class="agency-container">
+        <div class="agency-card">
+            <img src="../img/garda_siochana_logo.png" alt="Garda Síochána Logo">
+            <h3>Garda Síochána</h3>
+            <p>The national police service of Ireland, dedicated to keeping the peace and enforcing the law.</p>
+            <a href="https://www.garda.ie/en/" class="btn">Visit Website</a>
+        </div>
+
+        <div class="agency-card">
+            <img src="../img/donegal_fire_service_logo.png" alt="Donegal County Fire Service Logo">
+            <h3>Donegal County Fire Service</h3>
+            <p>Providing emergency fire services to the people of Donegal, ensuring the safety of communities and property.</p>
+            <a href="https://www.donegalcoco.ie/services/fire-and-rescue" class="btn">Learn More</a>
+        </div>
+
+        <div class="agency-card">
+            <img src="../img/national_ambulance_service_logo.png" alt="National Ambulance Service Logo">
+            <h3>National Ambulance Service</h3>
+            <p>Offering pre-hospital emergency care, responding quickly to medical emergencies across the country.</p>
+            <a href="https://www.nationalambulanceservice.ie" class="btn">Contact NAS</a>
+        </div>
+    </div>
+
+    <div class="voluntary-container">
+        <h2>Voluntary and Private Services</h2>
+        <div class="agency-card">
+            <img src="../img/translink_logo.png" alt="Translink Logo">
+            <h3>Translink</h3>
+            <p>Providing transport services across Northern Ireland, connecting communities with public transit solutions.</p>
+            <a href="https://www.translink.co.uk" class="btn">Explore Routes</a>
+        </div>
+
+        <div class="agency-card">
+            <img src="../img/curamcare_logo.png" alt="Cúramcare Logo">
+            <h3>Cúramcare Volunteer Ambulance Service</h3>
+            <p>A community-driven volunteer service, offering free medical response and assistance in emergencies.</p>
+            <a href="https://www.curamcare.org" class="btn">Join Cúramcare</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left footer-section">
+                <img src="/img/irelandroblox.png" alt="Government of Ireland logo" class="footer-logo" />
+                <p>&copy; Ireland on Roblox. All Rights Reserved</p>
+            </div>
+            <div class="footer-middle footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#mediacentre">Media Centre</a></li>
+                    <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-right footer-section">
+                <h3>Connect with us</h3>
+                <div class="social-icons">
+                    <a href="https://discord.gg/btJ9cVPa5m"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@rxireland"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://instagram.com//"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateHeader() {
+            const authLink = document.getElementById('auth-link');
+            const username = localStorage.getItem('username');
+
+            if (username) {
+                authLink.innerHTML = `<a href="/pages/logout.html">Welcome, ${username}</a>`;
+            } else {
+                authLink.innerHTML = '<a href="/pages/signin.html">Sign in</a>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateHeader);
+    </script>
+</body>
+</html>
