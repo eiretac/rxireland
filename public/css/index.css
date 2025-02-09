@@ -42,9 +42,11 @@ header img {
 nav {
    background-color: #004d44;
    color: #ffffff;
-   padding-right: 10px; /* Reduced padding to bring items closer */
-   padding-left: 10px; /* Reduced padding to bring items closer */
+   padding-right: 10px; /* Reduced padding to pull nav closer */
+   padding-left: 10px; /* Reduced padding to pull nav closer */
    font-size: 16px;
+   display: flex;
+   justify-content: flex-end; /* Align items to the right */
    flex: 1;
 }
 
@@ -53,7 +55,7 @@ nav ul {
    padding: 0;
    margin: 0;
    display: flex;
-   justify-content: center;
+   justify-content: flex-end; /* Align list items to the right */
 }
 
 nav ul li {
