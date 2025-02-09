@@ -21,6 +21,7 @@ body {
    background-color: #ffffff; /* Light mode default */
 }
 
+/* Header Styles */
 header {
    background-color: #004d44;
    color: #ffffff;
@@ -44,7 +45,7 @@ nav {
    color: #ffffff;
    padding-right: 15px;
    padding-left: 15px;
-   font-size: 27;
+   font-size: 27px;
    flex: 1;
 }
 
@@ -69,6 +70,8 @@ nav ul li a {
 nav ul li a:hover {
    background-color: #0056a0;
 }
+
+
 
 /* Search Container Styling */
 .search-container {
