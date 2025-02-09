@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ireland's Politics</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Scripts -->
+    <script src="/javascript/theme.js" defer></script>
+
+    <!-- Discord Embed (Open Graph) -->
+    <meta property="og:title" content="Ireland's Politics">
+    <meta property="og:description" content="Learn about Ireland's political system and the current government structure.">
+    <meta property="og:image" content="https://rxireland.org/img/embed.png">
+    <meta property="og:url" content="https://rxireland.org">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+   <header>
+        <img src="../img/irelandroblox.png" alt="Government of Ireland Logo">
+        <nav>
+            <ul>
+                <li><a href="https://discord.gg/btJ9cVPa5m">Join</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Services</a></li>
+                <li id="auth-link"><a href="/pages/signin.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Ireland's Political System</h1>
+        <p>Ireland operates under a parliamentary democracy where the government is formed by the party or coalition with the most seats in the Dáil. The Taoiseach (Prime Minister) leads the government, while the President serves as a ceremonial head of state.</p>
+    </div>
+
+    <div class="container">
+        <h2>Current Government</h2>
+        <p>The current government is an interim Government serving the foundation of the group..</p>
+        <ul>
+            <li><strong>Taoiseach:</strong> Yukwuk</li>
+            <li><strong>Tánaiste and Minister for Justice:</strong> Selwyns</li>
+            <li><strong>Minister for Foreign Affairs:</strong> Lilaea</li>
+            <li><strong>Minister for Enterprise, Culture and Arts:</strong> ughitssmee</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Political Parties</h2>
+        <div class="party-container">
+            <div class="party-card">
+                <img src="img/fianna_fail.png" alt="Fianna Fáil Logo">
+                <h3>Fianna Fáil</h3>
+                <p><strong>Leader:</strong> [Name]</p>
+                <a href="https://discord.gg/fiannafail">Join Discord</a>
+            </div>
+            <div class="party-card">
+                <img src="img/sinn_fein.png" alt="Sinn Féin Logo">
+                <h3>Sinn Féin</h3>
+                <p><strong>Leader:</strong> [Name]</p>
+                <a href="https://discord.gg/https://discord.gg/n4WW2ACJYA">Join Discord</a>
+            </div>
+            <div class="party-card">
+                <img src="img/fine_gael.png" alt="Fine Gael Logo">
+                <h3>Fine Gael</h3>
+                <p><strong>Leader:</strong> [Name]</p>
+                <a href="https://discord.gg/finegael">Join Discord</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left footer-section">
+                <img src="/img/irelandroblox.png" alt="Government of Ireland logo" class="footer-logo" />
+                <p>&copy; Ireland on Roblox. All Rights Reserved</p>
+            </div>
+            <div class="footer-middle footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#mediacentre">Media Centre</a></li>
+                    <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-right footer-section">
+                <h3>Connect with us</h3>
+                <div class="social-icons">
+                    <a href="https://discord.gg/btJ9cVPa5m"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@rxireland"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://instagram.com//"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateHeader() {
+            const authLink = document.getElementById('auth-link');
+            const username = localStorage.getItem('username');
+
+            if (username) {
+                authLink.innerHTML = `<a href="/pages/logout.html">Welcome, ${username}</a>`;
+            } else {
+                authLink.innerHTML = '<a href="/pages/signin.html">Sign in</a>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateHeader);
+    </script>
+</body>
+</html>
