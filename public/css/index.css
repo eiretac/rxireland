@@ -1,0 +1,270 @@
+/* Example for local font */
+@font-face {
+   font-family: 'Lato';
+   src: url('../fonts/Lato.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Lato-Bold';
+   src: url('../fonts/latobold.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+
+body {
+   font-family: Lato, sans-serif; /* Lato should now be available */
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: #333;
+   background-color: #ffffff; /* Light mode default */
+}
+
+header {
+   background-color: #004d44;
+   color: #ffffff;
+   padding: 5px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   z-index: 1000;
+   box-sizing: border-box;
+}
+
+header img {
+   max-width: 150px;
+   height: auto;
+   margin-left: 50px; /* Added 'px' unit */
+}
+
+nav {
+   background-color: #004d44;
+   color: #ffffff;
+   padding-right: 15px;
+   padding-left: 15px;
+   font-size: 27;
+   flex: 1;
+}
+
+nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+}
+
+nav ul li {
+   margin: 0;
+}
+
+nav ul li a {
+   color: #ffffff;
+   text-decoration: none;
+   padding: 10px 20px;
+}
+
+nav ul li a:hover {
+   background-color: #0056a0;
+}
+
+/* Search Container Styling */
+.search-container {
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.search-container h1 {
+    font-size: 36px;
+    color: #FFF;
+}
+
+.search-container .input-group {
+    max-width: 100%;
+}
+
+.search-container .form-control {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+.search-container .btn-state-gold {
+    background-color: #83764e;
+    border: none;
+    color: #FFF;
+    padding: 10px 20px;
+}
+
+.search-container .btn-state-gold:hover {
+    background-color: #5e5636;
+}
+
+.search-container ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.search-container ul li {
+    margin-bottom: 10px;
+}
+
+.search-container ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.search-container ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+   padding: 20px;
+   background-color: #ffffff;
+}
+
+/* Footer Styles */
+footer {
+   background-color: #004d44;
+   color: #ffffff;
+   padding: 40px 20px;
+   border-top: 2px solid #444;
+}
+ 
+.footer-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+ 
+.footer-section {
+   margin-bottom: 20px;
+   flex: 1;
+   min-width: 250px;
+}
+ 
+.footer-logo {
+   width: 150px;
+   margin-bottom: 20px;
+}
+ 
+.footer-left p {
+   font-size: 14px;
+   margin-top: 10px;
+}
+ 
+.footer-middle h3,
+.footer-right h3 {
+   font-size: 20px;
+   margin-bottom: 20px;
+}
+ 
+.footer-links {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+ 
+.footer-links li {
+   margin-bottom: 10px;
+}
+ 
+.footer-links a {
+   color: #ffffff;
+   text-decoration: none;
+   font-size: 16px;
+}
+ 
+.footer-links a:hover {
+   text-decoration: underline;
+}
+ 
+.footer-right p {
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+ 
+.social-icons {
+   display: flex;
+   gap: 15px;
+   margin-top: 15px;
+}
+ 
+.social-icons a {
+   color: #ffffff;
+   font-size: 20px;
+   transition: color 0.3s ease;
+}
+ 
+.social-icons a:hover {
+   color: #ffca2b;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+   background-color: #121212; /* Dark background */
+   color: #f0f0f0; /* Light text */
+}
+
+header.dark-mode {
+   background-color: #004d44;
+   color: #ffffff;
+}
+
+nav.dark-mode {
+   background-color: #1b1b1b;
+}
+
+nav ul li a.dark-mode {
+   color: #ffffff;
+}
+
+nav ul li a:hover.dark-mode {
+   background-color: #333333;
+}
+
+.search-container.dark-mode {
+   background-color: #333333;
+}
+
+.search-box.dark-mode input[type="text"] {
+   background-color: #444444;
+   color: #ffffff;
+}
+
+.search-box.dark-mode button {
+   background-color: #555555;
+   border-color: #555555;
+}
+
+.search-box.dark-mode button:hover {
+   background-color: #777777;
+}
+
+.search-info.dark-mode {
+   color: #ffffff;
+}
+
+.container.dark-mode {
+   background-color: #1e1e1e;
+}
+
+footer.dark-mode {
+   background-color: #004d44;
+}
+ 
+.footer-links a.dark-mode {
+   color: #bbbbbb;
+}
+
+.social-icons a.dark-mode:hover {
+   color: #dddddd;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Ireland</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #004d44;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056a0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow wrapping of elements */
+        }
+
+        .left {
+            flex: 1;
+            min-width: 300px; /* Set a minimum width */
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="range"],
+        input[type="url"] {
+            width: calc(100% - 24px); /* Adjust width to fit padding */
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004d44;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #003e3b;
+        }
+
+    .canvas-container {
+        border: 1px solid #ddd;
+        padding: 10px;
+        background: #fff;
+        border-radius: 4px;
+        width: 100%; /* Full width to prevent overflow */
+        box-sizing: border-box; /* Include padding and border in width */
+        overflow: hidden; /* Prevent overflow of canvas */
+    }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../img/gov.ie.png" alt="Government of Ireland Logo">
+        <nav>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/pages/signin.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="irishText">Text as Gaelige</label>
+                    <input type="text" id="irishText" oninput="updatePreview()">
+                </div>
+                <div class="control-group">
+                    <label for="secondText">Text in English</label>
+                    <input type="text" id="secondText" oninput="updatePreview()">
+                </div>
+                <div class="control-group">
+                    <label for="charLimit">Characters Per Line: <span id="charLimitValue">27</span></label>
+                    <input type="range" id="charLimit" min="15" max="45" value="27" oninput="updatePreview(); updateCharLimitValue()">
+                </div>
+                <button onclick="toggleAdditionalSettings()">Advanced Options</button>
+                <div id="additionalSettings" class="hidden">
+                    <div class="control-group">
+                        <label for="irishTextY1">Irish Text Y1 Position:</label>
+                        <input type="number" id="irishTextY1" value="367" oninput="updatePreview()">
+                    </div>
+                    <div class="control-group">
+                        <label for="irishTextY2">Irish Text Y2 Position:</label>
+                        <input type="number" id="irishTextY2" value="196" oninput="updatePreview()">
+                    </div>
+                    <div class="control-group">
+                        <label for="secondTextY1">Second Text Y1 Position:</label>
+                        <input type="number" id="secondTextY1" value="538" oninput="updatePreview()">
+                    </div>
+                    <div class="control-group">
+                        <label for="secondTextY2">Second Text Y2 Position:</label>
+                        <input type="number" id="secondTextY2" value="709" oninput="updatePreview()">
+                    </div>
+                </div>
+                <button onclick="showSaveImageModal()">Download</button>
+            </div>
+            <div class="canvas-container">
+                <canvas id="logoCanvas" width="2905" height="822"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Image Modal -->
+    <div id="saveImageModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeSaveImageModal()">&times;</span>
+            <h2>Select Style to Download</h2>
+            <button onclick="saveImage('standard')">Standard</button>
+            <!-- Removed black and white download options -->
+        </div>
+    </div>
+
+    <footer>
+        Inspired by Biorach.
+    </footer>
+
+    <script src="../javascript/logo-creator.js"></script> <!-- Updated script source -->
+</body>
+
+</html>

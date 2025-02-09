@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Creator Tool</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #004d44;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #004d44;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056a0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004d44;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #003e3b;
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .right {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .embed-preview {
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #ffffff;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .embed-preview::before {
+            content: '';
+            width: 5px;
+            height: 100%;
+            background-color: var(--embed-color, #004d44);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .embed-preview img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .embed-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #004d44;
+            margin-bottom: 10px;
+        }
+
+        .embed-description {
+            margin-bottom: 10px;
+            white-space: pre-line;
+        }
+
+        .embed-fields {
+            margin-top: 10px;
+        }
+
+        .embed-field {
+            margin-bottom: 8px;
+        }
+
+        .embed-field .name {
+            font-weight: bold;
+            display: inline-block;
+            width: 30%;
+        }
+
+        .embed-field .value {
+            display: inline-block;
+            width: 65%;
+        }
+
+        .embed-footer {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .embed-footer img {
+            max-width: 30px;
+            margin-right: 10px;
+        }
+
+        pre {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../img/gov.ie.png" alt="Government of Ireland Logo">
+        <nav>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/pages/signin.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <h1>Embed Creator Tool</h1>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Job Title">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Description of the job listing."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input type="url" id="url" placeholder="https://example.com">
+            </div>
+            <div class="form-group">
+                <label for="color">Color</label>
+                <input type="color" id="color" value="#004d44">
+            </div>
+            <div class="form-group">
+                <label for="footer-text">Footer Text</label>
+                <input type="text" id="footer-text" placeholder="Footer text">
+            </div>
+            <div class="form-group">
+                <label for="footer-icon-url">Footer Icon URL</label>
+                <input type="url" id="footer-icon-url" placeholder="https://example.com/footer-icon.png">
+            </div>
+            <div class="form-group">
+                <label for="image-url">Image URL</label>
+                <input type="url" id="image-url" placeholder="https://example.com/image.png">
+            </div>
+            <div class="form-group">
+                <label for="thumbnail-url">Thumbnail URL</label>
+                <input type="url" id="thumbnail-url" placeholder="https://example.com/thumbnail.png">
+            </div>
+            <div class="form-group">
+                <label for="fields">Fields (JSON Array)</label>
+                <textarea id="fields" placeholder='[{"name": "Field Name", "value": "Field Value", "inline": true}]'></textarea>
+            </div>
+            <button onclick="generateEmbed()">Generate Embed</button>
+        </div>
+
+        <div class="right">
+            <h2>Generated Embed Preview</h2>
+            <div id="embed-preview" class="embed-preview"></div>
+            <h2>Generated JSON</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script>
+        function generateEmbed() {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const url = document.getElementById('url').value;
+            const color = document.getElementById('color').value;
+            const footerText = document.getElementById('footer-text').value;
+            const footerIconUrl = document.getElementById('footer-icon-url').value;
+            const imageUrl = document.getElementById('image-url').value;
+            const thumbnailUrl = document.getElementById('thumbnail-url').value;
+            let fields = [];
+
+            try {
+                fields = JSON.parse(document.getElementById('fields').value);
+            } catch (e) {
+                console.error('Invalid JSON for fields');
+            }
+
+            const embed = {
+                description: title ? `## ${title}\n${description}` : description, // Title included in description as "## Title"
+                url,
+                color: parseInt(color.replace('#', ''), 16), // Convert hex color to integer
+                footer: footerText ? { text: footerText, icon_url: footerIconUrl || undefined } : undefined,
+                image: imageUrl ? { url: imageUrl } : undefined,
+                thumbnail: thumbnailUrl ? { url: thumbnailUrl } : undefined,
+                fields: fields.length ? fields : undefined
+            };
+
+            document.getElementById('output').textContent = JSON.stringify(embed, null, 2);
+
+            // Update the embed preview
+            const embedPreview = document.getElementById('embed-preview');
+            embedPreview.innerHTML = '';
+            embedPreview.style.setProperty('--embed-color', color);
+
+            // Create a div for the title if provided
+            if (title) {
+                const titleElement = document.createElement('div');
+                titleElement.className = 'embed-title';
+                titleElement.textContent = title;
+                embedPreview.appendChild(titleElement);
+            }
+
+            // Create a div for the description if provided
+            if (description) {
+                const descriptionElement = document.createElement('div');
+                descriptionElement.className = 'embed-description';
+                descriptionElement.textContent = description;
+                embedPreview.appendChild(descriptionElement);
+            }
+
+            // Create an image element if the image URL is provided
+            if (imageUrl) {
+                const imageElement = document.createElement('img');
+                imageElement.src = imageUrl;
+                embedPreview.appendChild(imageElement);
+            }
+
+            // Create a div for fields if provided
+            if (fields.length) {
+                const fieldsContainer = document.createElement('div');
+                fieldsContainer.className = 'embed-fields';
+
+                fields.forEach(field => {
+                    const fieldElement = document.createElement('div');
+                    fieldElement.className = 'embed-field';
+
+                    const nameElement = document.createElement('span');
+                    nameElement.className = 'name';
+                    nameElement.textContent = field.name;
+
+                    const valueElement = document.createElement('span');
+                    valueElement.className = 'value';
+                    valueElement.textContent = field.value;
+
+                    fieldElement.appendChild(nameElement);
+                    fieldElement.appendChild(valueElement);
+                    fieldsContainer.appendChild(fieldElement);
+                });
+
+                embedPreview.appendChild(fieldsContainer);
+            }
+
+            // Create a div for the footer if provided
+            if (footerText || footerIconUrl) {
+                const footerElement = document.createElement('div');
+                footerElement.className = 'embed-footer';
+
+                if (footerIconUrl) {
+                    const footerIcon = document.createElement('img');
+                    footerIcon.src = footerIconUrl;
+                    footerElement.appendChild(footerIcon);
+                }
+
+                if (footerText) {
+                    const footerTextElement = document.createElement('span');
+                    footerTextElement.textContent = footerText;
+                    footerElement.appendChild(footerTextElement);
+                }
+
+                embedPreview.appendChild(footerElement);
+            }
+
+            // Create an image element if the thumbnail URL is provided
+            if (thumbnailUrl) {
+                const thumbnailElement = document.createElement('img');
+                thumbnailElement.src = thumbnailUrl;
+                thumbnailElement.style.float = 'right';
+                embedPreview.appendChild(thumbnailElement);
+            }
+        }
+    </script>
+</body>
+
+</html>

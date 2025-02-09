@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        @font-face {
+           font-family: 'Lato';
+           src: url('../fonts/Lato.woff2') format('woff2');
+           font-weight: normal;
+           font-style: normal;
+        }
+        @font-face {
+               font-family: 'Lato-Bold';
+               src: url('../fonts/latobold.woff2') format('woff2');
+               font-weight: normal;
+               font-style: normal;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #00665C;
+            margin: 0;
+            color: #333; 
+        }
+        .signin-container {
+            background-color: #ffffff;
+            padding: 40px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+            border-radius: 12px; 
+            text-align: center;
+            width: 300px; 
+            transition: transform 0.2s; 
+        }
+        .signin-container:hover {
+            transform: translateY(-5px); 
+        }
+        .signin-container h2 {
+            margin-bottom: 20px;
+            font-family: 'Lato-Bold', sans-serif;
+            font-size: 24px; 
+            color: #000000; 
+        }
+        .signin-container button {
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px; 
+            font-weight: bold; 
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+        .roblox-button {
+            background-color: #004D44;
+            color: #ffffff; 
+        }
+        .roblox-button:hover {
+            background-color: #00695c; 
+            transform: translateY(-2px); 
+        }
+        .roblox-button:active {
+            transform: translateY(1px); 
+        }
+    </style>
+</head>
+<body>
+    
+<div class="signin-container">
+    <h2>Sign in to access government services</h2>
+    <button id="roblox-signin-button" class="roblox-button" onclick="signInWithRoblox()">Validate with Roblox</button>
+</div>
+
+<script>
+    function signInWithRoblox() {
+        const clientId = '2759614236093732470'; // Replace with your Roblox app's client ID
+        const redirectUri = 'https://rxireland.org/javascript/callback.js'; // Update to match your Vercel project URL
+
+        const authUrl = `https://apis.roblox.com/oauth/v1/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=openid`;
+
+        window.location.href = authUrl;
+    }
+</script>
+
+</body>
+</html>
